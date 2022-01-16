@@ -13,7 +13,6 @@ const Header = (props) => {
 };
 
 const HeaderWrapper = styled.header`
-  @import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
   display: flex;
   font-family: "Staatliches", cursive;
   flex-flow: row wrap;

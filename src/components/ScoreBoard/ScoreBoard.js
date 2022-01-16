@@ -19,17 +19,21 @@ const ScoreBoardWrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-top: 2rem;
 `;
-const RoundWrapper = styled.h1`
+const RoundWrapper = styled.h2`
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 4rem;
+  font-family: "Black Ops One", cursive;
 `;
 
 const ScoresWrapper = styled.div`
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-evenly;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
   width: 90%;
   margin-top: 3rem;
+  gap: 2rem;
 `;
 export default ScoreBoard;
