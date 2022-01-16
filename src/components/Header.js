@@ -16,17 +16,20 @@ const HeaderWrapper = styled.header`
   @import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
   display: flex;
   font-family: "Staatliches", cursive;
-  flex-flow: column nowrap;
+  flex-flow: row wrap;
   background-color: ${({ theme }) => theme.colors.primary};
   color: ${({ theme }) => theme.colors.primaryText};
   padding: 2rem;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  font-size: 2.9rem;
   text-align: center;
 `;
 
 const ImageWrapper = styled.div`
-  width: 25rem;
+  min-width: 30rem;
+  width: 35%;
+  max-width: 60rem;
 `;
 export default Header;
