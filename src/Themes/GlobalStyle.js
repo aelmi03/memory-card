@@ -35,8 +35,9 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
   img {
-    display: block;
-    width: 100%;
+   max-width: 100%;
+   height: auto;
+   border-radius:5px;
   }
   button,
   input,
