@@ -13,7 +13,9 @@ const Header = (props) => {
 };
 
 const HeaderWrapper = styled.div`
+  @import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
   display: flex;
+  font-family: "Staatliches", cursive;
   flex-flow: column nowrap;
   background-color: ${({ theme }) => theme.colors.primary};
   color: ${({ theme }) => theme.colors.primaryText};
@@ -22,6 +24,7 @@ const HeaderWrapper = styled.div`
   align-items: center;
   gap: 1rem;
   text-align: center;
+  font-size: 2.5rem;
 `;
 
 const ImageWrapper = styled.div`
