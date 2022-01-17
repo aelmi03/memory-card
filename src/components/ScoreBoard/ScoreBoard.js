@@ -4,10 +4,13 @@ import Score from "./Score";
 const ScoreBoard = ({ round, currentScore, highScore }) => {
   return (
     <ScoreBoardWrapper>
-      <RoundWrapper>{`Round ${round ? round : 1}`}</RoundWrapper>
+      <RoundWrapper>{`Round ${round}`}</RoundWrapper>
+      <DescriptionWrapper>
+        Don't click the same character twice in each round or you lose!
+      </DescriptionWrapper>
       <ScoresWrapper>
-        <Score text="Current Score : 1" />
-        <Score text="High Score : 2" />
+        <Score text={`Current Score : ${currentScore}`} />
+        <Score text={`High Score : ${highScore}`} />
       </ScoresWrapper>
     </ScoreBoardWrapper>
   );
@@ -22,6 +25,15 @@ const ScoreBoardWrapper = styled.div`
   margin-top: 2rem;
   margin-bottom: 3rem;
 `;
+
+const DescriptionWrapper = styled.h3`
+  font-weight: bold;
+  font-family: "Exo", cursive;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  text-align: center;
+`;
+
 const RoundWrapper = styled.h2`
   font-weight: bold;
   font-size: 4rem;
