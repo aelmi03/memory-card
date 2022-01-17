@@ -26,13 +26,14 @@ const CardWrapper = styled.div`
   border: solid 2px ${({ theme }) => theme.colors.primaryLight};
   &:hover {
     transform: scale(1.15);
+    box-shadow: ${({ theme }) => theme.colors.primaryLight} 0px 10px 20px;
   }
 `;
 
 const ImageWrapper = styled.img`
-  width: 20rem;
+  width: 22rem;
   height: auto;
-  height: 15rem;
+  height: 18rem;
   margin-bottom: 1rem;
 `;
 

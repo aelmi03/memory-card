@@ -14,11 +14,10 @@ const Main = (props) => {
       />
     );
   });
-  console.log(cards);
   return (
     <MainWrapper>
       <ScoreBoard />
-      <CardWrapper>{cards.slice(10)}</CardWrapper>
+      <CardWrapper>{cards}</CardWrapper>
     </MainWrapper>
   );
 };
