@@ -21,6 +21,7 @@ const HeaderWrapper = styled.header`
   padding: 2rem;
   justify-content: center;
   align-items: center;
+  text-shadow: 2px 2px ${({ theme }) => theme.colors.secondaryLight};
   gap: 1rem;
   font-size: 2.9rem;
   text-align: center;

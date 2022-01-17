@@ -25,6 +25,7 @@ const RoundWrapper = styled.h2`
   font-weight: bold;
   font-size: 4rem;
   font-family: "Black Ops One", cursive;
+  text-shadow: 0px 0px 5px ${({ theme }) => theme.colors.secondaryLight};
 `;
 
 const ScoresWrapper = styled.div`
