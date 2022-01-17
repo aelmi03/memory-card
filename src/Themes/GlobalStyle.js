@@ -19,6 +19,9 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: "Nunito", sans-serif;
     font-size: 1.6rem;
+    background-color: ${({ theme }) => theme.colors.main};
+    margin-bottom: 100px;
+
   }
   header {
     font-size: 2.4rem;

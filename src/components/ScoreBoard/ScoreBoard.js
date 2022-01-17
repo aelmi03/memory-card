@@ -20,6 +20,7 @@ const ScoreBoardWrapper = styled.div`
   align-items: center;
   width: 100%;
   margin-top: 2rem;
+  margin-bottom: 3rem;
 `;
 const RoundWrapper = styled.h2`
   font-weight: bold;

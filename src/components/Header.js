@@ -25,6 +25,7 @@ const HeaderWrapper = styled.header`
   gap: 1rem;
   font-size: 2.9rem;
   text-align: center;
+  border-bottom: 8px dotted ${({ theme }) => theme.colors.primaryText};
 `;
 
 const ImageWrapper = styled.div`
