@@ -14,6 +14,7 @@ const Main = (props) => {
       />
     );
   });
+  console.log(cards.length);
   return (
     <MainWrapper>
       <ScoreBoard />
