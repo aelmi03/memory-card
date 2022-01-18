@@ -16,6 +16,7 @@ const Main = (props) => {
   const [characters, setCharacters] = useState(
     getUniqueItemsFromArray(animeCharacters, 3)
   );
+  const [hasWon, setHasWon] = useState(false);
   const successfulClick = (animeObject) => {
     setCharacters((characters) => shuffleArray(characters));
     setSelectedCharacters((selectedCharacters) => {
@@ -24,6 +25,7 @@ const Main = (props) => {
   };
   const startNewGame = () => {
     setIsGameOver(false);
+    setHasWon(false);
     setCurrentScore(0);
     setSelectedCharacters([]);
     setCharacters(getUniqueItemsFromArray(animeCharacters, 3));
@@ -45,7 +47,12 @@ const Main = (props) => {
       }
       setCurrentScore((currentScore) => currentScore + 1);
       if (selectedCharacters.length + 1 === characters.length) {
-        startNewRound();
+        if (characters.length === 8) {
+          setHasWon(true);
+          setIsGameOver(true);
+        } else {
+          startNewRound();
+        }
       } else {
         successfulClick(animeObject);
       }
@@ -68,7 +75,12 @@ const Main = (props) => {
   return (
     <MainWrapper>
       {isGameOver ? (
-        <GameOverScreen currentScore={currentScore} onClick={startNewGame} />
+        <GameOverScreen
+          currentScore={currentScore}
+          onClick={startNewGame}
+          highScore={highScore}
+          hasWon={hasWon}
+        />
       ) : (
         <React.Fragment>
           <ScoreBoard

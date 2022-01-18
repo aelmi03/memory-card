@@ -48,6 +48,5 @@ const ScoresWrapper = styled.div`
   align-items: center;
   width: 90%;
   margin-top: 3rem;
-  gap: 2rem;
 `;
 export default ScoreBoard;
