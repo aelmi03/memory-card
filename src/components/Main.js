@@ -6,7 +6,6 @@ import { useState } from "react";
 import { shuffleArray, getUniqueItemsFromArray } from "../Utils/utils";
 
 const Main = (props) => {
-  console.log("heo");
   const [currentScore, setCurrentScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
   const [round, setRound] = useState(1);
@@ -16,11 +15,7 @@ const Main = (props) => {
     getUniqueItemsFromArray(animeCharacters, 3)
   );
   const successfulClick = (animeObject) => {
-    if (currentScore + 1 > highScore) {
-      setHighScore(currentScore + 1);
-    }
     setCharacters((characters) => shuffleArray(characters));
-    setCurrentScore((currentScore) => currentScore + 1);
     setSelectedCharacters((selectedCharacters) => {
       return [...selectedCharacters, animeObject];
     });
@@ -31,11 +26,26 @@ const Main = (props) => {
     setCharacters(getUniqueItemsFromArray(animeCharacters, 3));
     setRound(1);
   };
+  const startNewRound = () => {
+    setRound((round) => round + 1);
+    setSelectedCharacters([]);
+    setCharacters(
+      getUniqueItemsFromArray(animeCharacters, characters.length + 1)
+    );
+  };
   const handleCardClick = (animeObject) => {
     if (selectedCharacters.includes(animeObject)) {
       startNewGame();
     } else {
-      successfulClick(animeObject);
+      if (currentScore + 1 > highScore) {
+        setHighScore(currentScore + 1);
+      }
+      setCurrentScore((currentScore) => currentScore + 1);
+      if (selectedCharacters.length + 1 === characters.length) {
+        startNewRound();
+      } else {
+        successfulClick(animeObject);
+      }
     }
   };
 
