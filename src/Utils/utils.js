@@ -6,7 +6,7 @@ export const getUniqueItemsFromArray = (array, numberOfItems) => {
   const newArray = [];
   const takenIndices = [];
   while (newArray.length < numberOfItems) {
-    const randomIndex = Math.floor(Math.random() * numberOfItems);
+    const randomIndex = Math.floor(Math.random() * array.length);
     if (!takenIndices.includes(randomIndex)) {
       newArray.push(array[randomIndex]);
       takenIndices.push(randomIndex);

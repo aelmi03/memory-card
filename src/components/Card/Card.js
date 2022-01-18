@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-const Card = ({ name, imageURL }) => {
+const Card = ({ name, imageURL, onClick, animeObject }) => {
   return (
-    <CardWrapper>
+    <CardWrapper onClick={() => onClick(animeObject)}>
       <ImageWrapper
         src={imageURL}
         alt={`Anime drawing depicting the character`}
