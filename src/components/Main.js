@@ -47,7 +47,7 @@ const Main = (props) => {
       }
       setCurrentScore((currentScore) => currentScore + 1);
       if (selectedCharacters.length + 1 === characters.length) {
-        if (characters.length === 8) {
+        if (characters.length === animeCharacters.length) {
           setHasWon(true);
           setIsGameOver(true);
         } else {
@@ -107,7 +107,7 @@ const MainWrapper = styled.section`
 const CardWrapper = styled.div`
   display: flex;
   flex-flow: row wrap;
-  width: 100%;
+  width: 90%;
   justify-content: space-evenly;
 `;
 export default Main;
