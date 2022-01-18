@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-const GameOverScreen = ({ currentScore }) => {
+const GameOverScreen = ({ currentScore, onClick }) => {
   return (
     <GameOverScreenWrapper>
-      <TextWrapper>{`You lost with a score of ${0}!`}</TextWrapper>
-      <ButtonWrapper>{`New Game`}</ButtonWrapper>
+      <TextWrapper>{`You lost with a score of ${currentScore}!`}</TextWrapper>
+      <ButtonWrapper onClick={onClick}>{`New Game`}</ButtonWrapper>
     </GameOverScreenWrapper>
   );
 };

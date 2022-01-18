@@ -11,7 +11,7 @@ const Main = (props) => {
   const [currentScore, setCurrentScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
   const [round, setRound] = useState(1);
-  const [isGameOver, setIsGameOver] = useState(true);
+  const [isGameOver, setIsGameOver] = useState(false);
   const [selectedCharacters, setSelectedCharacters] = useState([]);
   const [characters, setCharacters] = useState(
     getUniqueItemsFromArray(animeCharacters, 3)
@@ -23,6 +23,7 @@ const Main = (props) => {
     });
   };
   const startNewGame = () => {
+    setIsGameOver(false);
     setCurrentScore(0);
     setSelectedCharacters([]);
     setCharacters(getUniqueItemsFromArray(animeCharacters, 3));
@@ -37,7 +38,7 @@ const Main = (props) => {
   };
   const handleCardClick = (animeObject) => {
     if (selectedCharacters.includes(animeObject)) {
-      startNewGame();
+      setIsGameOver(true);
     } else {
       if (currentScore + 1 > highScore) {
         setHighScore(currentScore + 1);
@@ -67,7 +68,7 @@ const Main = (props) => {
   return (
     <MainWrapper>
       {isGameOver ? (
-        <GameOverScreen currentScore={currentScore} characters />
+        <GameOverScreen currentScore={currentScore} onClick={startNewGame} />
       ) : (
         <React.Fragment>
           <ScoreBoard
