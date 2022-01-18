@@ -2,6 +2,8 @@ import styled from "styled-components";
 import ScoreBoard from "./ScoreBoard";
 import animeCharacters from "../Utils/AnimeCharacters";
 import Card from "./Card";
+import GameOverScreen from "./GameOverScreen";
+import React from "react";
 import { useState } from "react";
 import { shuffleArray, getUniqueItemsFromArray } from "../Utils/utils";
 
@@ -9,7 +11,7 @@ const Main = (props) => {
   const [currentScore, setCurrentScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
   const [round, setRound] = useState(1);
-  const [isGameOver, setIsGameOver] = useState(false);
+  const [isGameOver, setIsGameOver] = useState(true);
   const [selectedCharacters, setSelectedCharacters] = useState([]);
   const [characters, setCharacters] = useState(
     getUniqueItemsFromArray(animeCharacters, 3)
@@ -61,24 +63,33 @@ const Main = (props) => {
       />
     );
   });
+
   return (
     <MainWrapper>
-      <ScoreBoard
-        currentScore={currentScore}
-        highScore={highScore}
-        round={round}
-      />
-      <CardWrapper>{cards}</CardWrapper>
+      {isGameOver ? (
+        <GameOverScreen currentScore={currentScore} characters />
+      ) : (
+        <React.Fragment>
+          <ScoreBoard
+            currentScore={currentScore}
+            highScore={highScore}
+            round={round}
+          />
+          <CardWrapper>{cards}</CardWrapper>
+        </React.Fragment>
+      )}
     </MainWrapper>
   );
 };
 
-const MainWrapper = styled.div`
+const MainWrapper = styled.section`
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  width: 100%;
   background-color: ${({ theme }) => theme.colors.main};
+  flex-grow: 2;
 `;
 const CardWrapper = styled.div`
   display: flex;

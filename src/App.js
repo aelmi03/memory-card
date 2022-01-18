@@ -14,7 +14,7 @@ function App() {
 }
 const AppWrapper = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-flow: column nowrap;
+  justify-content: center;
 `;
 export default App;
