@@ -89,7 +89,7 @@ const MainWrapper = styled.section`
   align-items: center;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.main};
-  flex-grow: 2;
+  flex-grow: 1;
 `;
 const CardWrapper = styled.div`
   display: flex;

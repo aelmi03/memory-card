@@ -16,5 +16,6 @@ const AppWrapper = styled.div`
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
+  min-height: 100vh;
 `;
 export default App;
