@@ -1,0 +1,11 @@
+{
+  "files": {
+    "main.js": "/memory-card/static/js/main.b281a8f5.js",
+    "static/media/memory.jpg": "/memory-card/static/media/memory.19fe54330e8561a76e59.jpg",
+    "index.html": "/memory-card/index.html",
+    "main.b281a8f5.js.map": "/memory-card/static/js/main.b281a8f5.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.b281a8f5.js"
+  ]
+}
