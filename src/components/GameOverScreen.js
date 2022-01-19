@@ -19,11 +19,11 @@ const GameOverScreen = ({ currentScore, onClick, hasWon, newHighScore }) => {
 const GameOverScreenWrapper = styled.div`
   display: flex;
   flex-flow: column nowrap;
-  padding: 9rem 5rem;
+  padding: 2rem 2rem;
   border-radius: 10px;
   border: 2px solid ${({ theme }) => theme.colors.secondaryText};
   background-color: ${({ theme }) => theme.colors.secondaryLight};
-  justify-content: center;
+  justify-content: space-around;
   box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.6);
   align-items: center;
   width: 40%;
@@ -31,7 +31,7 @@ const GameOverScreenWrapper = styled.div`
   margin-top: 8rem;
   @media (min-width: 768px) {
     min-width: 60rem;
-    padding: 12rem 10rem;
+    padding: 5rem 5rem;
   }
 `;
 
@@ -53,7 +53,7 @@ const ButtonWrapper = styled.button`
   padding: 1.5rem 5rem;
   font-size: 2rem;
   font-family: "Black Ops One", cursive;
-  margin-top: 5rem;
+  margin-top: 8rem;
   border-radius: 10px;
   z-index: 1;
   position: relative;
