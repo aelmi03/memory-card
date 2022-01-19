@@ -26,9 +26,13 @@ const GameOverScreenWrapper = styled.div`
   justify-content: center;
   box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.6);
   align-items: center;
-  width: 30%;
+  width: 40%;
   min-width: 30rem;
   margin-top: 8rem;
+  @media (min-width: 768px) {
+    min-width: 60rem;
+    padding: 12rem 10rem;
+  }
 `;
 
 const TextWrapper = styled.h3`
@@ -37,6 +41,9 @@ const TextWrapper = styled.h3`
   text-align: center;
   font-family: "Exo", cursive;
   color: ${({ theme }) => theme.colors.secondaryText};
+  @media (min-width: 768px) {
+    font-size: 3rem;
+  }
 `;
 
 const ButtonWrapper = styled.button`
@@ -73,6 +80,9 @@ const ButtonWrapper = styled.button`
   &:hover {
     color: ${({ theme }) => theme.colors.secondaryLight};
     text-shadow: 1.5px 1.5px ${({ theme }) => theme.colors.primaryLight};
+  }
+  @media (min-width: 768px) {
+    font-size: 3.3rem;
   }
 `;
 export default GameOverScreen;

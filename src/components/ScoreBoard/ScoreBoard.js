@@ -32,6 +32,9 @@ const DescriptionWrapper = styled.h3`
   font-size: 1.5rem;
   margin-top: 2rem;
   text-align: center;
+  @media (min-width: 768px) {
+    font-size: 2.2rem;
+  }
 `;
 
 const RoundWrapper = styled.h2`
@@ -39,6 +42,9 @@ const RoundWrapper = styled.h2`
   font-size: 4rem;
   font-family: "Black Ops One", cursive;
   text-shadow: 0px 0px 5px ${({ theme }) => theme.colors.secondaryLight};
+  @media (min-width: 768px) {
+    font-size: 5.7rem;
+  }
 `;
 
 const ScoresWrapper = styled.div`

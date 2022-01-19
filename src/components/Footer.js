@@ -23,6 +23,9 @@ const FooterWrapper = styled.footer`
   width: 100%;
   bottom: 0;
   right: 0;
+  @media (min-width: 768px) {
+    font-size: 1.8rem;
+  }
 `;
 
 const LinkWrapper = styled.a`
@@ -31,5 +34,8 @@ const LinkWrapper = styled.a`
   justify-content: center;
   align-items: center;
   margin-left: 1rem;
+  @media (min-width: 768px) {
+    font-size: 2rem;
+  }
 `;
 export default Footer;

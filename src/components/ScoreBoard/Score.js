@@ -15,6 +15,10 @@ const ScoreWrapper = styled.div`
   width: 23rem;
   text-align: center;
   margin: 2rem;
+  @media (min-width: 768px) {
+    font-size: 2.4rem;
+    width: 30rem;
+  }
 `;
 
 export default Score;
